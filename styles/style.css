@@ -6,9 +6,10 @@
 * {
 	margin:0;
 	padding: 0;
-	font-size: 18px;
+	font-size: 20px;
 }
 
+/* ------custom properties----- */
 :root {
 	--website-theme: rgb(34, 88, 75);
 	--button-font-size: 20px;
@@ -22,17 +23,28 @@
 /* ------common style----- */
 body {
 	font-family: poppins;
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(255, 255, 255);
 	font-weight: 600;
 }
 
+button {
+	margin-top: 20px;
+	padding: 15px 25px;
+	border: none;
+	background-color: rgb(34, 88, 75);
+	color: white;
+	font-size: var(--button-font-size);
+	cursor: pointer;
+}
+
 header, main {
-	margin: 4% 8%
+	margin: 4% 8%;
 }
 
 /* -----header style------ */
+
 header .logo {
-	font-size: 25px;
+	font-size: 28px;
 	font-weight: 700;
 }
 
@@ -46,6 +58,7 @@ header i {
 }
 
 
+
 header nav {
 	display: flex;
 	justify-content: space-between;
@@ -56,8 +69,11 @@ nav a {
 	color: black
 }
 
+header:hover .main-camera {
+	transform: scale(1.2);
+}
 
-		/* ---------hero section------ */
+/* ---------hero section------ */
 /* ..........left box.......... */
 .hero-content {
 	display: flex;
@@ -78,19 +94,12 @@ nav a {
 	color: var(--dark-theme-font)
 }
 
-.hero-content p,
-.hero-content button {
+.hero-content p {
 	margin: 20px 0;
 }
 
 .hero-content button {
-	margin-top: 20px;
-	padding: 15px 25px;
-	border: none;
 	border-radius: 50px;
-	background-color: rgb(34, 88, 75);
-	color: white;
-	font-size: var(--button-font-size);
 }
 
 .fa-arrow-right {
@@ -105,7 +114,11 @@ nav a {
 	bottom: 50px;
 }
 
-				/* -----------main content---------- */
+.hero-content .main-camera {
+	transition: .5s ease;
+}
+
+/* -----------main content---------- */
 /* ...........logo section............ */
 
 .brand-logos hr {
@@ -121,7 +134,7 @@ nav a {
 	margin: 50px 50px;
 }
 
-/* ..........product collection section------ */
+/* ..........product collection section style------ */
 
 .container {
 	margin-top: 10%;
@@ -183,34 +196,234 @@ nav a {
 .container .more-option {
 	font-size: 25px;
 	color: var(--website-theme);
-	float: right;
+	text-align: end;
 	margin-top: 70px;
 }
 
 
+/* --------get offer single section style------- */
+.get-offer-container {
+	display: flex;
+	margin-top: 100px;
+}
+
+.get-offer-container .half-width img {
+	position: relative;
+	left: 13%;
+	width: 65%;
+	border-radius: 20px;
+}
+
+.offer-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.offer-details h3 {
+	font-size: 40px;
+	margin-bottom: 25px;
+}
+
+.offer-details p {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--light-font);
+	width: 70%;
+}
+
+.offer-details p span {
+	color:rgb(34, 88, 75);
+	font-weight: 800;
+}
+
+
+/* -----footer style---- */
+.footer {
+	background: rgb(24, 24, 24);
+	color: white;
+	text-align: center;
+	height: 330px;
+	margin-top: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* -----------
+------------
+media queries
+--------------
+------------ */
+
+/* -----for mobile device----- */
+@media only screen and (max-width:688px) {
+
+	.half-width {
+		width: unset;
+	}
+
+	.nav-bar {
+		display: unset;
+		text-align: center;
+	}
+	.nav-bar .nav-links{
+		display: none;
+	}
+
+	.hero-content, .get-offer-container{
+		flex-direction:column-reverse;
+		margin-top: 50px;
+	}
+
+	.hero-content  {
+		text-align: center;
+	}
+	
+	.hero-content .moto {
+		font-size:30px;
+	}
+
+	.hero-content p {
+		width: 100%;
+	}
+
+	.hero-content img {
+		left: -5px;
+		margin-top: 0;
+	}
+
+	
+	.brand-logos {
+		display: none;
+	}
+	
+	.product-detail h2, .offer-details p {
+		width: 100%;
+	}
+
+	.product-detail .product-title {
+		font-size: 22px;
+	}
+	
+	.collections {
+		grid-template-columns: repeat(1, 1fr);
+		margin-top: 0px;
+	}
+	.offer-details {
+		text-align: center;
+	}
+
+	.offer-details h3 {
+		font-size: 30px;
+	}
+	.get-offer-container .half-width img {
+		top:50px;
+		width: 75%;
+	}
+	
+	button {
+		margin-left: 0;
+	}
+	
+	footer .social-media img {
+		width: 10%;
+	}
+}
+
+
+/* --------------tablet devices--------- */
+@media only screen and (min-width:688px) and (max-width:992px){
+	.nav-bar {
+		display: unset;
+		text-align: center;
+	}
+	.half-width {
+		width: unset;
+	}
+
+	.nav-bar {
+		display: unset;
+	}
+	.nav-bar .nav-links{
+		display: none;
+	}
+
+	.hero-content, .get-offer-container{
+		flex-direction:column-reverse;
+		margin-top: 50px;
+	}
+
+	.hero-content  {
+		text-align: center;
+	}
+	
+	.hero-content .moto {
+		font-size:40px;
+	}
+
+	.hero-content p {
+		width: 100%;
+	}
+
+	.hero-content img {
+		left: -5px;
+		margin-top: 0;
+	}
+
+	
+	.brand-logos {
+		display: none;
+	}
+	
+	.product-detail h2, .offer-details p {
+		width: 100%;
+	}
+
+
+	.collections {
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 0px;
+	}
+	.offer-details {
+		text-align: center;
+	}
+
+	.get-offer-container .half-width img {
+		top:50px;
+		width: 75%;
+	}
+	
+	button {
+		margin-left: 0;
+	}
+	
+	footer .social-media img {
+		width: 10%;
+	}
+
+	
+}
 
 
 
+.footer h3 {
+	font-size: 30px;
+}
 
+.footer h2 {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 10px 0;
+}
 
+.social-media {
+	margin-top: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-	margin-top: 500px;
+.social-media img {
+	width: 2.3%;
+	margin: 0 10px;
 }
 
 
