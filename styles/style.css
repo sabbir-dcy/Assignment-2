@@ -1,0 +1,210 @@
+/* -----fonts----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+	margin:0;
+	padding: 0;
+	font-size: 18px;
+}
+
+:root {
+	--button-font-size: 20px;
+	--light-font: rgb(170, 170, 170);
+	--dark-theme-font:rgb(51, 51, 51);
+	--rating:rgb(255, 94, 94);
+	--tiny-font: 12px;
+
+}
+
+/* ------common style----- */
+body {
+	font-family: poppins;
+	background-color: rgb(240, 240, 240);
+}
+
+header, main {
+	margin: 4% 8%
+}
+
+/* -----header style------ */
+header .logo {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+header .nav-links {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+header a,
+header i {
+	margin-right:40px;
+}
+
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav a {
+	text-decoration: none;
+	color: black
+}
+
+
+		/* ---------hero section------ */
+/* ..........left box.......... */
+.hero-content {
+	display: flex;
+	margin-top: 200px;
+}
+
+.half-width {
+	width: 50%;
+}
+
+.hero-content .moto {
+	font-size: 60px;
+	color: var(--dark-theme-font)
+}
+
+.hero-content p {
+	width: 70%;
+	color: var(--dark-theme-font)
+}
+
+.hero-content p,
+.hero-content button {
+	margin: 20px 0;
+	font-weight: 600;
+}
+
+.hero-content button {
+	margin-top: 20px;
+	padding: 15px 25px;
+	border: none;
+	border-radius: 50px;
+	background-color: rgb(34, 88, 75);
+	color: white;
+	font-size: var(--button-font-size);
+}
+
+.fa-arrow-right {
+	margin: 0;
+}
+
+/* .........right box.......... */
+.hero-content img {
+	position: relative;
+	width: 80%;
+	left: 100px;
+	bottom: 50px;
+}
+
+				/* -----------main content---------- */
+/* ...........logo section............ */
+
+.brand-logos hr {
+	border: 1px solid rgba(150, 179, 171, 0.26)
+}
+
+.brand-logo{
+	display: flex;
+	justify-content: center;
+}
+
+.brand-logo img {
+	margin: 50px 50px;
+}
+
+/* ..........product collection section------ */
+
+.container {
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.container .headline {
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.collections {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-row-gap: 40px;
+	grid-column-gap:40px
+}
+
+.collection {
+	background-color: rgb(255, 255, 255);
+	padding: 20px;
+	box-shadow: 0 0 20px rgb(231, 231, 231);
+	border-radius: 10px;
+}
+
+.product-banner img{
+	width: 100%;
+}
+
+.product-detail h3 {
+	font-size: 35px;
+	font-weight: 600;
+	color: var(--dark-theme-font);
+	margin-top: 15px;
+}
+
+/* .collection .product-detail .product-price {
+	font-weight: 400;
+	margin-bottom: 10px;
+} */
+
+.product-detail .rating i {
+	font-size: var(--tiny-font);
+}
+
+.rating .fa-star.filled {
+	color: var(--rating);
+}
+
+.rating .fa-star.empty {
+	color: linear-gradient(red, blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	margin-top: 500px;
+}
+
+
+
