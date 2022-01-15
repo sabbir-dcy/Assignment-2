@@ -41,6 +41,10 @@ header, main {
 	margin: 4% 8%;
 }
 
+.fas.fa-arrow-right {
+	margin-left: 10px;
+}
+
 /* -----header style------ */
 
 header .logo {
@@ -71,6 +75,18 @@ nav a {
 
 header:hover .main-camera {
 	transform: scale(1.2);
+}
+header:hover .camera-background {
+	display: none;
+}
+
+
+
+.camera-background {
+	position: absolute;
+	top: 200px;
+	right: 240px;
+	width: 30%;
 }
 
 /* ---------hero section------ */
@@ -237,19 +253,6 @@ header:hover .main-camera {
 	font-weight: 800;
 }
 
-
-/* -----footer style---- */
-.footer {
-	background: rgb(24, 24, 24);
-	color: white;
-	text-align: center;
-	height: 330px;
-	margin-top: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 /* -----------
 ------------
 media queries
@@ -266,6 +269,10 @@ media queries
 	.nav-bar {
 		display: unset;
 		text-align: center;
+	}
+
+	.nav-bar h3 {
+		font-size: 18px;
 	}
 	.nav-bar .nav-links{
 		display: none;
@@ -290,7 +297,7 @@ media queries
 
 	.hero-content img {
 		left: -5px;
-		margin-top: 0;
+		margin-top: 60px;
 	}
 
 	
@@ -327,7 +334,7 @@ media queries
 	}
 	
 	footer .social-media img {
-		width: 10%;
+		width: 5%;
 	}
 }
 
@@ -338,6 +345,7 @@ media queries
 		display: unset;
 		text-align: center;
 	}
+
 	.half-width {
 		width: unset;
 	}
@@ -399,12 +407,22 @@ media queries
 	}
 	
 	footer .social-media img {
-		width: 10%;
+		width: 5%;
 	}
 
-	
 }
 
+/* -----footer style---- */
+.footer {
+	background: rgb(26, 35, 36);
+	color: white;
+	text-align: center;
+	height: 330px;
+	margin-top: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
 
 .footer h3 {
