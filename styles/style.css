@@ -295,6 +295,10 @@ media queries
 		width: 100%;
 	}
 
+	.camera-background {
+		display: none;
+	}
+	
 	.hero-content img {
 		left: -5px;
 		margin-top: 60px;
@@ -372,6 +376,10 @@ media queries
 
 	.hero-content p {
 		width: 100%;
+	}
+
+	.camera-background {
+		display: none;
 	}
 
 	.hero-content img {
